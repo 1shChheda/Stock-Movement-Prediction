@@ -79,28 +79,36 @@ class TwitterScraper:
                 ).flatten(limit=limit)
 
                 for tweet in tweet_paginator:
-                    #processing each tweet
-                    cleaned_text = self.clean_tweet(tweet.text)
-                    sentiment = self.get_tweet_sentiment(cleaned_text)
+                    try:
+                        #processing each tweet
+                        cleaned_text = self.clean_tweet(tweet.text)
+                        sentiment = self.get_tweet_sentiment(cleaned_text)
+                        
+                        tweet_data = {
+                            'id': tweet.id,
+                            'created_at': tweet.created_at,
+                            'text': tweet.text,
+                            'cleaned_text': cleaned_text,
+                            'sentiment': sentiment,
+                            'keyword': keyword,
+                            'likes': tweet.public_metrics['like_count'] if hasattr(tweet, 'public_metrics') else 0,
+                            'retweets': tweet.public_metrics['retweet_count'] if hasattr(tweet, 'public_metrics') else 0,
+                        }
+                        collected_tweets.append(tweet_data)
                     
-                    tweet_data = {
-                        'id': tweet.id,
-                        'created_at': tweet.created_at,
-                        'text': tweet.text,
-                        'cleaned_text': cleaned_text,
-                        'sentiment': sentiment,
-                        'keyword': keyword,
-                        'likes': tweet.public_metrics['like_count'] if hasattr(tweet, 'public_metrics') else 0,
-                        'retweets': tweet.public_metrics['retweet_count'] if hasattr(tweet, 'public_metrics') else 0,
-                    }
-                    collected_tweets.append(tweet_data)
-                    
+                    except tweepy.TooManyRequests:
+                        self.logger.error("Rate limit exceeded. Stopping collection early.")
+                        raise  # Propagate the exception to trigger partial return
+                
                 self.logger.info(f"Collected {len(collected_tweets)} tweets for keyword: {keyword}")
 
+        except tweepy.TooManyRequests:
+            self.logger.error("Rate limit exceeded while collecting tweets.")
         except Exception as e:
             self.logger.error(f"Error collecting tweets: {e}")
-            self.logger.info("Returning partially collected tweets")
         
+        if collected_tweets:
+            self.logger.info("Returning partially collected tweets")
         return collected_tweets
 
     def save_tweets(
@@ -127,7 +135,7 @@ class TwitterScraper:
             df.to_csv(filepath, index=False, encoding='utf-8')
             self.logger.info(f"Tweets saved to {filepath}")
             
-            #calculating sentiment stats (just to print and understnand better)
+            #calculating sentiment stats (just to print and understand better)
             if include_sentiment_stats:
                 total_tweets = len(tweets)
                 sentiment_counts = df['sentiment'].value_counts()
@@ -147,7 +155,12 @@ def main():
         scraper = TwitterScraper()
         
         stock_keywords = [
-            'stock market'
+            'stock market', 
+            'NASDAQ',  
+            'trading stocks',
+            'bull market',
+            'market analysis',
+            'stock trading',
         ]
         
         tweets = scraper.collect_tweets(

@@ -1,0 +1,20 @@
+2024-11-22 03:33:36 - twitter_scraper - INFO - Twitter API authentication successful
+2024-11-22 03:33:36 - twitter_scraper - INFO - Searching tweets for query: NASDAQ lang:en -is:retweet
+2024-11-22 03:49:05 - twitter_scraper - ERROR - Error collecting tweets: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-22 03:49:05 - twitter_scraper - INFO - Tweets appended to data/raw/tweets_20241122.csv
+2024-11-22 03:49:05 - twitter_scraper - INFO - 
+Sentiment Analysis Results:
+2024-11-22 03:49:05 - twitter_scraper - INFO - Total Tweets Analyzed: 99
+2024-11-22 03:49:05 - twitter_scraper - INFO - Positive tweets: 57 (57.58%)
+2024-11-22 03:49:05 - twitter_scraper - INFO - Neutral tweets: 30 (30.30%)
+2024-11-22 03:49:05 - twitter_scraper - INFO - Negative tweets: 12 (12.12%)
+2024-11-22 03:52:07 - twitter_scraper - INFO - Twitter API authentication successful
+2024-11-22 03:52:07 - twitter_scraper - INFO - Searching tweets for query: trading stocks lang:en -is:retweet
+2024-11-22 03:52:09 - twitter_scraper - INFO - Collected 100 tweets for keyword: trading stocks
+2024-11-22 03:52:09 - twitter_scraper - INFO - Tweets appended to data/raw/tweets_20241122.csv
+2024-11-22 03:52:09 - twitter_scraper - INFO - 
+Sentiment Analysis Results:
+2024-11-22 03:52:09 - twitter_scraper - INFO - Total Tweets Analyzed: 100
+2024-11-22 03:52:09 - twitter_scraper - INFO - Neutral tweets: 67 (67.00%)
+2024-11-22 03:52:09 - twitter_scraper - INFO - Positive tweets: 32 (32.00%)
+2024-11-22 03:52:09 - twitter_scraper - INFO - Negative tweets: 1 (1.00%)

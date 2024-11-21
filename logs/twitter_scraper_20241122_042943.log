@@ -1,0 +1,10 @@
+2024-11-22 04:29:43 - twitter_scraper - INFO - Twitter API authentication successful
+2024-11-22 04:29:43 - twitter_scraper - INFO - Searching tweets for query: market analysis lang:en -is:retweet
+2024-11-22 04:29:44 - twitter_scraper - INFO - Collected 100 tweets for keyword: market analysis
+2024-11-22 04:29:44 - twitter_scraper - INFO - Returning partially collected tweets
+2024-11-22 04:29:44 - twitter_scraper - INFO - Tweets saved to data/raw/tweets_20241122_042944.csv
+2024-11-22 04:29:44 - twitter_scraper - INFO - 
+Sentiment Analysis Results:
+2024-11-22 04:29:44 - twitter_scraper - INFO - Total Tweets Analyzed: 100
+2024-11-22 04:29:44 - twitter_scraper - INFO - Positive tweets: 76 (76.00%)
+2024-11-22 04:29:44 - twitter_scraper - INFO - Negative tweets: 24 (24.00%)

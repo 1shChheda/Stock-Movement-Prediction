@@ -1,0 +1,11 @@
+2024-11-22 04:42:10 - twitter_scraper - INFO - Twitter API authentication successful
+2024-11-22 04:42:10 - twitter_scraper - INFO - Searching tweets for query: bull market lang:en -is:retweet
+2024-11-22 04:44:46 - twitter_scraper - INFO - Collected 100 tweets for keyword: bull market
+2024-11-22 04:44:46 - twitter_scraper - INFO - Returning partially collected tweets
+2024-11-22 04:44:46 - twitter_scraper - INFO - Tweets saved to data/raw/tweets_20241122_044446.csv
+2024-11-22 04:44:46 - twitter_scraper - INFO - 
+Sentiment Analysis Results:
+2024-11-22 04:44:46 - twitter_scraper - INFO - Total Tweets Analyzed: 100
+2024-11-22 04:44:46 - twitter_scraper - INFO - Positive tweets: 54 (54.00%)
+2024-11-22 04:44:46 - twitter_scraper - INFO - Neutral tweets: 30 (30.00%)
+2024-11-22 04:44:46 - twitter_scraper - INFO - Negative tweets: 16 (16.00%)
