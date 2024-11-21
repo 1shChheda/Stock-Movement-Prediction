@@ -1,0 +1,10 @@
+2024-11-22 02:55:20 - twitter_scraper - INFO - Twitter API authentication successful
+2024-11-22 02:55:20 - twitter_scraper - INFO - Searching tweets for query: stock market lang:en -is:retweet
+2024-11-22 02:55:21 - twitter_scraper - INFO - Collected 100 tweets for keyword: stock market
+2024-11-22 02:55:21 - twitter_scraper - INFO - Tweets saved to data/raw/tweets_20241122_025521.csv
+2024-11-22 02:55:21 - twitter_scraper - INFO - 
+Sentiment Analysis Results:
+2024-11-22 02:55:21 - twitter_scraper - INFO - Total Tweets Analyzed: 100
+2024-11-22 02:55:21 - twitter_scraper - INFO - Positive tweets: 77 (77.00%)
+2024-11-22 02:55:21 - twitter_scraper - INFO - Neutral tweets: 13 (13.00%)
+2024-11-22 02:55:21 - twitter_scraper - INFO - Negative tweets: 10 (10.00%)

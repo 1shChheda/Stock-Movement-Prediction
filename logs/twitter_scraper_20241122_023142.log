@@ -1,0 +1,11 @@
+2024-11-22 02:31:42 - twitter_scraper - INFO - Twitter API authentication successful
+2024-11-22 02:31:42 - twitter_scraper - INFO - Searching tweets for query: stock market lang:en -is:retweet
+2024-11-22 02:47:19 - twitter_scraper - ERROR - Error collecting tweets: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-11-22 02:47:19 - twitter_scraper - INFO - Returning partially collected tweets
+2024-11-22 02:47:19 - twitter_scraper - INFO - Tweets saved to data/raw/tweets_20241122_024719.csv
+2024-11-22 02:47:19 - twitter_scraper - INFO - 
+Sentiment Analysis Results:
+2024-11-22 02:47:19 - twitter_scraper - INFO - Total Tweets Analyzed: 90
+2024-11-22 02:47:19 - twitter_scraper - INFO - Positive tweets: 72 (80.00%)
+2024-11-22 02:47:19 - twitter_scraper - INFO - Neutral tweets: 11 (12.22%)
+2024-11-22 02:47:19 - twitter_scraper - INFO - Negative tweets: 7 (7.78%)

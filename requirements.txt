@@ -1,0 +1,19 @@
+# Data Collection
+tweepy
+praw
+requests
+pandas
+numpy
+nltk
+textblob
+spacy
+scikit-learn
+tensorflow
+keras
+plotly
+matplotlib
+streamlit
+python-dotenv
+pytest
+jupyter
+loguru

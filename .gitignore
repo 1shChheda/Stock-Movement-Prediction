@@ -1,0 +1,13 @@
+__pycache__/
+.env
+instance/
+target/
+dist/
+.ipynb_checkpoints
+
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
