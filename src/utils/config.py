@@ -10,18 +10,13 @@ class Config:
     STOCK_KEYWORDS = [
         'stock market', 
         'NASDAQ', 
-        'NYSE', 
-        'trading stocks',
+        'market analysis',
+        'bull market',
         '$AAPL',
         '$GOOGL',
         '$MSFT', 
         '$TSLA',
-        '$AMZN',
-        'bull market',
-        'bear market',
-        'market analysis',
         'stock trading',
-        'investment strategy'
     ]
     
     TRADING_KEYWORDS = [
@@ -45,7 +40,30 @@ class Config:
     LOG_PATH = 'logs/'
     LOG_LEVEL = 'INFO'
     
-    #Twitter API Settings (just incase)
-    MAX_TWEETS_PER_REQUEST = 100
-    MAX_TOTAL_TWEETS = 1000
-    TWEET_LANG = 'en'
+    TARGET_STOCKS = {
+        'AAPL': 'Apple Inc.',
+        'GOOGL': 'Alphabet Inc.',
+        'MSFT': 'Microsoft Corporation',
+        'TSLA': 'Tesla Inc.',
+        'AMZN': 'Amazon.com Inc.'
+    }
+    
+    SENTIMENT_CATEGORIES = ['positive', 'neutral', 'negative']
+    MA_WINDOWS = [3, 7, 14]  #moving average windows(days)
+    PRICE_MOVEMENT_THRESHOLD = 0.01  #1% threshold
+    
+    #model settings
+    RANDOM_STATE = 42
+    TEST_SIZE = 0.2
+    CV_FOLDS = 5
+    
+    #hyperparams
+    MODEL_PARAMS = {
+        'random_forest': {
+            'n_estimators': 100,
+            'max_depth': 10,
+            'min_samples_split': 5,
+            'min_samples_leaf': 2,
+            'random_state': RANDOM_STATE
+        }
+    }

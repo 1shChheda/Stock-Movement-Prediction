@@ -12,7 +12,7 @@ from src.utils.logger import setup_logger
 
 class TwitterScraper:
     def __init__(self):
-        self.logger = setup_logger('twitter_scraper')
+        self.logger = setup_logger('twitter_scraper') #twitter_scraper's logger.
         
         try:
             # using only bearer_token for now (read-only permissions, coz thats all we need)
@@ -156,10 +156,13 @@ def main():
         
         stock_keywords = [
             'stock market', 
-            'NASDAQ',  
-            'trading stocks',
-            'bull market',
+            'NASDAQ', 
             'market analysis',
+            'bull market',
+            '$AAPL',
+            '$GOOGL',
+            '$MSFT', 
+            '$TSLA',
             'stock trading',
         ]
         

@@ -1,0 +1,9 @@
+2024-11-27 18:32:28 - data_preprocessor - INFO - Loaded 11 files with total 1189 tweets
+2024-11-27 18:32:30 - data_preprocessor - INFO - Preprocessing complete. Total tweets: 1110
+2024-11-27 18:32:30 - data_preprocessor - INFO - Sentiment distribution:
+2024-11-27 18:32:30 - data_preprocessor - INFO - sentiment
+positive    665
+neutral     308
+negative    137
+Name: count, dtype: int64
+2024-11-27 18:32:30 - data_preprocessor - INFO - Processed data saved to data/processed/processed_tweets_20241127_183230.csv

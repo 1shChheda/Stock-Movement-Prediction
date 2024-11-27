@@ -3,6 +3,7 @@ __pycache__/
 instance/
 target/
 dist/
+logs/
 .ipynb_checkpoints
 
 .venv
