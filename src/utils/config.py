@@ -60,10 +60,20 @@ class Config:
     #hyperparams
     MODEL_PARAMS = {
         'random_forest': {
-            'n_estimators': 100,
-            'max_depth': 10,
+            'n_estimators': 200,
+            'max_depth': 15,
             'min_samples_split': 5,
             'min_samples_leaf': 2,
-            'random_state': RANDOM_STATE
+            'max_features': 'sqrt',
+            'random_state': RANDOM_STATE,
+            'class_weight': 'balanced'
         }
+    }
+
+    SENTIMENT_THRESHOLDS = {
+        'strongly_positive': (0.5, 1.0),
+        'positive': (0.1, 0.5),
+        'neutral': (-0.1, 0.1),
+        'negative': (-0.5, -0.1),
+        'strongly_negative': (-1.0, -0.5)
     }
